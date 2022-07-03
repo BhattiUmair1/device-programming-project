@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Arrival_icon.png" />
+    <None Remove="Assets\Background.png" />
+    <None Remove="Assets\Back_arrow.png" />
+    <None Remove="Assets\Departure_icon.png" />
+    <None Remove="Assets\Flight.png" />
+    <None Remove="Assets\Flying_plane.png" />
+    <None Remove="Assets\Google.png" />
+    <None Remove="Assets\Like.png" />
+    <None Remove="Assets\Returnflight.png" />
+    <None Remove="Assets\Trashcan.png" />
+    <None Remove="Fonts\Roboto-Bold.ttf" />
+    <None Remove="Fonts\Roboto-Medium.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Arrival_icon.png" />
+    <EmbeddedResource Include="Assets\Background.png" />
+    <EmbeddedResource Include="Assets\Back_arrow.png" />
+    <EmbeddedResource Include="Assets\Departure_icon.png" />
+    <EmbeddedResource Include="Assets\Flight.png" />
+    <EmbeddedResource Include="Assets\Flying_plane.png" />
+    <EmbeddedResource Include="Assets\Google.png" />
+    <EmbeddedResource Include="Assets\Like.png" />
+    <EmbeddedResource Include="Assets\Returnflight.png" />
+    <EmbeddedResource Include="Assets\Trashcan.png" />
+    <EmbeddedResource Include="Fonts\Roboto-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.23.0" />
+    <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Auth.XamarinForms" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\FlightDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ResultPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
