@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\XamarinApp\\Project.Android\\Project.Android.csproj": {}
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.Android\\Project.Android.csproj": {}
   },
   "projects": {
-    "C:\\XamarinApp\\Project.Android\\Project.Android.csproj": {
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.Android\\Project.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\XamarinApp\\Project.Android\\Project.Android.csproj",
+        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.Android\\Project.Android.csproj",
         "projectName": "Project.Android",
-        "projectPath": "C:\\XamarinApp\\Project.Android\\Project.Android.csproj",
+        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.Android\\Project.Android.csproj",
         "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-        "outputPath": "C:\\XamarinApp\\Project.Android\\obj\\",
+        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "C:\\XamarinApp\\Project\\Project.csproj": {
-                "projectPath": "C:\\XamarinApp\\Project\\Project.csproj"
+              "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj": {
+                "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\XamarinApp\\Project\\Project.csproj": {
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\XamarinApp\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\XamarinApp\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-        "outputPath": "C:\\XamarinApp\\Project\\obj\\",
+        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umair\\AppData\\Roaming\\NuGet\\NuGet.Config",

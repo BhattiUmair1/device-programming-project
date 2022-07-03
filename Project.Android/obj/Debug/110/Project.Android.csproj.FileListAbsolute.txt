@@ -1010,7 +1010,6 @@ C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\an
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.AndroidX.ViewPager2.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.AndroidX.ViewPager2.pdb
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Auth.dll
-C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Auth.dll.mdb
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Auth.XamarinForms.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Essentials.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Essentials.pdb
@@ -1418,3 +1417,4 @@ C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\st
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\umair\Desktop\Opdracht\Project\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Auth.pdb

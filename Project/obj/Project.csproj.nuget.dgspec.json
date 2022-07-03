@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\XamarinApp\\Project\\Project.csproj": {}
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\XamarinApp\\Project\\Project.csproj": {
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\XamarinApp\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\XamarinApp\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-        "outputPath": "C:\\XamarinApp\\Project\\obj\\",
+        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umair\\AppData\\Roaming\\NuGet\\NuGet.Config",
