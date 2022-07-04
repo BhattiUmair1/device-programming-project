@@ -748,6 +748,46 @@ app_system_properties:
 .L.env.buf.177:
 	.zero	66
 	.size	.L.env.buf.177, 66
+	.type	.L.env.buf.178, @object
+.L.env.buf.178:
+	.zero	66
+	.size	.L.env.buf.178, 66
+	.type	.L.env.buf.179, @object
+.L.env.buf.179:
+	.zero	66
+	.size	.L.env.buf.179, 66
+	.type	.L.env.buf.180, @object
+.L.env.buf.180:
+	.zero	66
+	.size	.L.env.buf.180, 66
+	.type	.L.env.buf.181, @object
+.L.env.buf.181:
+	.zero	66
+	.size	.L.env.buf.181, 66
+	.type	.L.env.buf.182, @object
+.L.env.buf.182:
+	.zero	66
+	.size	.L.env.buf.182, 66
+	.type	.L.env.buf.183, @object
+.L.env.buf.183:
+	.zero	66
+	.size	.L.env.buf.183, 66
+	.type	.L.env.buf.184, @object
+.L.env.buf.184:
+	.zero	66
+	.size	.L.env.buf.184, 66
+	.type	.L.env.buf.185, @object
+.L.env.buf.185:
+	.zero	66
+	.size	.L.env.buf.185, 66
+	.type	.L.env.buf.186, @object
+.L.env.buf.186:
+	.zero	66
+	.size	.L.env.buf.186, 66
+	.type	.L.env.buf.187, @object
+.L.env.buf.187:
+	.zero	66
+	.size	.L.env.buf.187, 66
 	# Bundled assemblies data
 
 	.type	bundled_assemblies, @object
@@ -2358,7 +2398,97 @@ bundled_assemblies:
 	.zero	4
 	.quad	.L.env.buf.177	# name
 
-	.size	bundled_assemblies, 7120
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.178	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.179	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.180	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.181	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.182	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.183	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.184	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.185	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.186	# name
+
+	.long	0xffffffff	# apk_fd
+	.long	0x0	# data_offset
+	.long	0x0	# data_size
+	.zero	4
+	.quad	0x0	# data
+	.long	0x0	# name_length
+	.zero	4
+	.quad	.L.env.buf.187	# name
+
+	.size	bundled_assemblies, 7520
 	# Assembly store individual assembly data
 	.type	assembly_store_bundled_assemblies, @object
 	.global	assembly_store_bundled_assemblies
@@ -2569,7 +2699,7 @@ application_config:
 	.long	0x3	# package_naming_policy
 	.long	0xc	# environment_variable_count
 	.long	0x0	# system_property_count
-	.long	0xb2	# number_of_assemblies_in_apk
+	.long	0xbc	# number_of_assemblies_in_apk
 	.long	0x42	# bundled_assembly_name_width
 	.long	0x2	# number_of_assembly_store_files
 	.long	0x1c	# number_of_dso_cache_entries
@@ -2612,7 +2742,7 @@ application_config:
 
 	.type	.L.autostr.6, @object
 .L.autostr.6:
-	.asciz	"8f92465e-b6d9-4406-9408-582d672905f9"
+	.asciz	"c9594bb7-09fe-4895-ad04-47373e811b5c"
 	.size	.L.autostr.6, 37
 
 	.type	.L.autostr.7, @object

@@ -6138,11 +6138,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj",
+      "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.csproj",
+      "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\obj\\",
+      "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\umair\\AppData\\Roaming\\NuGet\\NuGet.Config",

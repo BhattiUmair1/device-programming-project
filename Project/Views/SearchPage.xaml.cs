@@ -24,12 +24,12 @@ namespace Project.Views
             LoadIcons();
         }
 
-        public SearchPage(string Email)
+        public SearchPage(string email, string password)
         {
             InitializeComponent();
             FlightType = 1;
             LoadIcons();
-            EmailAdress = Email;
+            EmailAdress = email;
         }
         private void LoadIcons()
         {

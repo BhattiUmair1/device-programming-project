@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "914594414910",
+    "project_id": "flightsappxamarin",
+    "storage_bucket": "flightsappxamarin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914594414910:android:81ae038275ae887382ac6f",
+        "android_client_info": {
+          "package_name": "com.schoolproject.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914594414910-coe2lkco4k8ui5gsntuu24pnj1ukbufc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoStY517adlLhhKoYEtPxiWcQJ29jkVBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914594414910-coe2lkco4k8ui5gsntuu24pnj1ukbufc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

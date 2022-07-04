@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project.Interfaces;
+using Project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +25,30 @@ namespace Project.Views
             imgbackground.Source = ImageSource.FromResource("Project.Assets.Background.png");
         }
 
-        private void TapGestureRecognizer_Continue(object sender, EventArgs e)
+        private async Task<object> LoginWithEmailAndPasswordAsync(string email, string password)
         {
-            if (!string.IsNullOrWhiteSpace(entEmail.Text))
+            var firebase = DependencyService.Get<IFirebaseAuthentication>();
+            //var result = await firebase.LoginWithEmailAndPassword(email, password);
+            FirebaseLoginRespons respons = await firebase.LoginWithEmailAndPassword("xamarin@testuser.com", "test12345");
+            return respons;
+
+        }
+
+        private async void TapGestureRecognizer_TappedAsync(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(entEmail.Text) && !string.IsNullOrWhiteSpace(entPassword.Text))
             {
-                Navigation.PushAsync(new SearchPage(entEmail.Text));
+                FirebaseLoginRespons respons = (FirebaseLoginRespons)await LoginWithEmailAndPasswordAsync(entEmail.Text, entPassword.Text);
+                if (respons.IsError != true)
+                {
+                    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
+                }
+                else
+                {
+                    Console.WriteLine(respons.ErrorMessage);
+                }
             }
+
         }
     }
 }
