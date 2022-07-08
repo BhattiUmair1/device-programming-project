@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\Project.Android.csproj": {}
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\Project.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\Project.Android.csproj": {
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\Project.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\Project.Android.csproj",
+        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\Project.Android.csproj",
         "projectName": "Project.Android",
-        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\Project.Android.csproj",
+        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\Project.Android.csproj",
         "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\obj\\",
+        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj": {
-                "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj"
+              "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj": {
+                "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj"
               }
             }
           }
@@ -62,9 +62,17 @@
               "target": "Package",
               "version": "[60.1142.1, )"
             },
+            "Xamarin.Firebase.Firestore": {
+              "target": "Package",
+              "version": "[60.1142.1, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
+            },
+            "Xamarin.Google.Guava": {
+              "target": "Package",
+              "version": "[27.1.0.1, )"
             },
             "Xamarin.GooglePlayServices.Basement": {
               "target": "Package",
@@ -74,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj": {
+    "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\obj\\",
+        "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umair\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -38,7 +38,6 @@ namespace Project.Models
         public string DDeparture { get; set; }
         public ImageSource ImageLike { get; set; }
         public ImageSource DImageFlightDepature { get; set; }
-
         public ImageSource Trashcan { get; set; }
         public string Email { get; set; }
 

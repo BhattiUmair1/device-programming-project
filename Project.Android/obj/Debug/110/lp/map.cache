@@ -1,5 +1,7 @@
 FormsViewGroup.dll
 Plugin.CurrentActivity.dll
+Square.OkHttp.dll
+Square.OkIO.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
 Xamarin.AndroidX.Annotation.Experimental.dll
@@ -50,10 +52,13 @@ Xamarin.Firebase.Analytics.dll
 Xamarin.Firebase.Analytics.Impl.dll
 Xamarin.Firebase.Auth.dll
 Xamarin.Firebase.Common.dll
+Xamarin.Firebase.Firestore.dll
 Xamarin.Firebase.Iid.dll
 Xamarin.Forms.Platform.Android.dll
 Xamarin.Forms.Platform.dll
 Xamarin.Google.Android.Material.dll
+Xamarin.Google.Guava.dll
+Xamarin.Google.Guava.FailureAccess.dll
 Xamarin.Google.Guava.ListenableFuture.dll
 Xamarin.GooglePlayServices.Base.dll
 Xamarin.GooglePlayServices.Basement.dll

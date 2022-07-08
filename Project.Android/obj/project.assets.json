@@ -192,6 +192,27 @@
           "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
         }
       },
+      "Square.OkHttp/2.7.5": {
+        "type": "package",
+        "dependencies": {
+          "Square.OkIO": "1.6.0"
+        },
+        "compile": {
+          "lib/MonoAndroid/Square.OkHttp.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Square.OkHttp.dll": {}
+        }
+      },
+      "Square.OkIO/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid/Square.OkIO.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Square.OkIO.dll": {}
+        }
+      },
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
@@ -2082,6 +2103,24 @@
           "Xamarin.Firebase.Analytics": "[60.1142.1]"
         }
       },
+      "Xamarin.Firebase.Firestore/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Square.OkHttp": "2.7.5",
+          "Xamarin.Firebase.Common": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Firestore.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Firestore.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Firestore.targets": {}
+        }
+      },
       "Xamarin.Firebase.Iid/60.1142.1": {
         "type": "package",
         "dependencies": {
@@ -2152,6 +2191,34 @@
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.Google.Android.Material.targets": {}
+        }
+      },
+      "Xamarin.Google.Guava/27.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Google.Guava.FailureAccess": "1.0.1",
+          "Xamarin.Google.Guava.ListenableFuture": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid50/Xamarin.Google.Guava.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid50/Xamarin.Google.Guava.dll": {}
+        }
+      },
+      "Xamarin.Google.Guava.FailureAccess/1.0.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid50/Xamarin.Google.Guava.FailureAccess.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid50/Xamarin.Google.Guava.FailureAccess.dll": {}
         }
       },
       "Xamarin.Google.Guava.ListenableFuture/1.0.0.2": {
@@ -2448,6 +2515,34 @@
         "plugin.currentactivity.2.1.0.4.nupkg.sha512",
         "plugin.currentactivity.nuspec",
         "readme.txt"
+      ]
+    },
+    "Square.OkHttp/2.7.5": {
+      "sha512": "q5/GwwXC/iF4mlIz+7FbzutXRsB9J/ee5QOcSnRYk81o4ETq5/i5phh3b2OhiR3ndWA+dWFk3AwuKwdyL7hT5w==",
+      "type": "package",
+      "path": "square.okhttp/2.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid/Square.OkHttp.dll",
+        "square.okhttp.2.7.5.nupkg.sha512",
+        "square.okhttp.nuspec"
+      ]
+    },
+    "Square.OkIO/1.6.0": {
+      "sha512": "pi34RScHEpHGVYVEI/uDi4HDgCqYHmSxVh2MOrJTXEWXbTdPePCXLv3Vq1/hQTGjSo57US9IT+S9ubDW/AiyGw==",
+      "type": "package",
+      "path": "square.okio/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid/Square.OkIO.dll",
+        "square.okio.1.6.0.nupkg.sha512",
+        "square.okio.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -5044,6 +5139,19 @@
         "xamarin.firebase.core.nuspec"
       ]
     },
+    "Xamarin.Firebase.Firestore/60.1142.1": {
+      "sha512": "pPl3UAz4rXIq40mi6/QYTLoOaDP8P7IzSvYxTLrqOz6COwJJDNjyAIY8aBIEZrJgCtQDUYfG5fhRCMvn9yvPfQ==",
+      "type": "package",
+      "path": "xamarin.firebase.firestore/60.1142.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.Firebase.Firestore.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Firestore.dll",
+        "xamarin.firebase.firestore.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.firestore.nuspec"
+      ]
+    },
     "Xamarin.Firebase.Iid/60.1142.1": {
       "sha512": "cHauaYNySwKJPBhTFhPujlFLUkr/2CzXHes2DMXDkBi6BcKcnuClwyQ9izY/PuDzflyaqfX5rJGtrkwwZ8pQxw==",
       "type": "package",
@@ -5291,6 +5399,32 @@
         "xamarin.google.android.material.nuspec"
       ]
     },
+    "Xamarin.Google.Guava/27.1.0.1": {
+      "sha512": "1JS0s3DWBn1GGygXmNr8xlLFcPKChPoYSc69CU7dcfWEqz+yKo2dBaQO5td1ZMe8ycJpYDjvyRS8/eAfjihE8A==",
+      "type": "package",
+      "path": "xamarin.google.guava/27.1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid50/Xamarin.Google.Guava.dll",
+        "xamarin.google.guava.27.1.0.1.nupkg.sha512",
+        "xamarin.google.guava.nuspec"
+      ]
+    },
+    "Xamarin.Google.Guava.FailureAccess/1.0.1": {
+      "sha512": "Kl3OGQG85DM/9usk4eLyRL+4x5L5L3Q1Fy6Vv3rivdEwH/PHdIw9+P8A2YpBsnzJkO37l7I9icXuQOWxWpGEUQ==",
+      "type": "package",
+      "path": "xamarin.google.guava.failureaccess/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid50/Xamarin.Google.Guava.FailureAccess.dll",
+        "xamarin.google.guava.failureaccess.1.0.1.nupkg.sha512",
+        "xamarin.google.guava.failureaccess.nuspec"
+      ]
+    },
     "Xamarin.Google.Guava.ListenableFuture/1.0.0.2": {
       "sha512": "qmkNS5p4eRoDjQM/6VyRaX6lFCNYCiMvFVRj3nfOzt/+AuqTqAhRqIcAYeWLtUxdfDOC72yLSfWKeLiPIuYz0A==",
       "type": "package",
@@ -5363,7 +5497,9 @@
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Firebase.Auth >= 60.1142.1",
       "Xamarin.Firebase.Core >= 60.1142.1",
+      "Xamarin.Firebase.Firestore >= 60.1142.1",
       "Xamarin.Forms >= 5.0.0.2012",
+      "Xamarin.Google.Guava >= 27.1.0.1",
       "Xamarin.GooglePlayServices.Basement >= 60.1142.1"
     ]
   },
@@ -5373,11 +5509,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\Project.Android.csproj",
+      "projectUniqueName": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\Project.Android.csproj",
       "projectName": "Project.Android",
-      "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\Project.Android.csproj",
+      "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\Project.Android.csproj",
       "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project.Android\\obj\\",
+      "outputPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -5394,8 +5530,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj": {
-              "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project\\Project\\Project.csproj"
+            "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj": {
+              "projectPath": "C:\\Users\\umair\\Desktop\\Opdracht\\Project\\Project\\Project.csproj"
             }
           }
         }
@@ -5428,9 +5564,17 @@
             "target": "Package",
             "version": "[60.1142.1, )"
           },
+          "Xamarin.Firebase.Firestore": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
+          },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2012, )"
+          },
+          "Xamarin.Google.Guava": {
+            "target": "Package",
+            "version": "[27.1.0.1, )"
           },
           "Xamarin.GooglePlayServices.Basement": {
             "target": "Package",

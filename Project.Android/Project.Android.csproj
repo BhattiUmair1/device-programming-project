@@ -69,14 +69,22 @@
     <PackageReference Include="Xamarin.Firebase.Core">
       <Version>60.1142.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Firestore">
+      <Version>60.1142.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Google.Guava">
+      <Version>27.1.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Basement">
       <Version>60.1142.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Firebase\FirebaseAuthentication.cs" />
+    <Compile Include="Services\FirestoreService.cs" />
+    <Compile Include="Services\FlightService.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

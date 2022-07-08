@@ -25,28 +25,43 @@ namespace Project.Views
             imgbackground.Source = ImageSource.FromResource("Project.Assets.Background.png");
         }
 
-        private async Task<object> LoginWithEmailAndPasswordAsync(string email, string password)
+        private async Task<FirebaseLoginRespons> LoginWithEmailAndPasswordAsync(string email, string password)
         {
             var firebase = DependencyService.Get<IFirebaseAuthentication>();
             //var result = await firebase.LoginWithEmailAndPassword(email, password);
-            FirebaseLoginRespons respons = await firebase.LoginWithEmailAndPassword("xamarin@testuser.com", "test12345");
+
+            // trigger a loading indicator
+            FirebaseLoginRespons respons = await firebase.LoginWithEmailAndPassword("xamarin@testuser.com", "test123456");
+
+            // check if you have a response => remove the loading indicator
+
             return respons;
 
         }
 
+
+        private async Task<UserInfo> GetFLightAsync()
+        {
+            var flightsObject = DependencyService.Get<IFlightsRepository>();
+            return await flightsObject.GetFlightAsync();
+        }
         private async void TapGestureRecognizer_TappedAsync(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(entEmail.Text) && !string.IsNullOrWhiteSpace(entPassword.Text))
             {
-                FirebaseLoginRespons respons = (FirebaseLoginRespons)await LoginWithEmailAndPasswordAsync(entEmail.Text, entPassword.Text);
-                if (respons.IsError != true)
-                {
-                    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
-                }
-                else
-                {
-                    Console.WriteLine(respons.ErrorMessage);
-                }
+                //FirebaseLoginRespons respons = await LoginWithEmailAndPasswordAsync(entEmail.Text, entPassword.Text);
+
+                UserInfo userInfo = await GetFLightAsync();
+                //if (respons.IsError != true)
+                //{
+                //    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
+                //}
+                //else
+                //{
+                //    Console.WriteLine(respons.ErrorMessage);
+                //}
+
+
             }
 
         }

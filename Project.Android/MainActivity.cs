@@ -5,10 +5,18 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Firebase;
+using FirestoreRe.Droid.Services;
+using Android.Gms.Tasks;
+using Firebase.Firestore;
+using Android.Gms.Extensions;
+using Project.Models;
+using Java.Interop;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace Project.Droid
 {
-    [Activity(Label = "Project", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+    [Activity(Label = "Project", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -17,7 +25,8 @@ namespace Project.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            FirebaseApp.InitializeApp(Application.Context);
+            //FirebaseApp.InitializeApp(Application.Context);
+            FirestoreService.Init(Application.Context);
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -26,5 +35,6 @@ namespace Project.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }

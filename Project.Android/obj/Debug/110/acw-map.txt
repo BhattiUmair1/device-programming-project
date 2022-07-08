@@ -4,6 +4,9 @@ project.droid.MainActivity;crc64a59cdf2b1f855388.MainActivity
 Plugin.CurrentActivity.ActivityLifecycleContextListener, Plugin.CurrentActivity;crc64435a5ac349fa9fda.ActivityLifecycleContextListener
 Plugin.CurrentActivity.ActivityLifecycleContextListener;crc64435a5ac349fa9fda.ActivityLifecycleContextListener
 plugin.currentactivity.ActivityLifecycleContextListener;crc64435a5ac349fa9fda.ActivityLifecycleContextListener
+Square.OkHttp.Call+ActionCallback, Square.OkHttp;com.squareup.okhttp.Call_ActionCallback
+Square.OkHttp.Call.ActionCallback;com.squareup.okhttp.Call_ActionCallback
+com.squareup.okhttp.Call_ActionCallback;com.squareup.okhttp.Call_ActionCallback
 AndroidX.Activity.IOnBackPressedDispatcherOwner, Xamarin.AndroidX.Activity;androidx.activity.OnBackPressedDispatcherOwner
 AndroidX.Activity.IOnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
 androidx.activity.OnBackPressedDispatcherOwner;androidx.activity.OnBackPressedDispatcherOwner
@@ -1096,6 +1099,9 @@ mono.com.google.firebase.auth.FirebaseAuth_AuthStateListenerImplementor;mono.com
 Firebase.Auth.FirebaseAuth+IIdTokenListenerImplementor, Xamarin.Firebase.Auth;mono.com.google.firebase.auth.FirebaseAuth_IdTokenListenerImplementor
 Firebase.Auth.FirebaseAuth.IIdTokenListenerImplementor;mono.com.google.firebase.auth.FirebaseAuth_IdTokenListenerImplementor
 mono.com.google.firebase.auth.FirebaseAuth_IdTokenListenerImplementor;mono.com.google.firebase.auth.FirebaseAuth_IdTokenListenerImplementor
+Firebase.Firestore.IEventListenerImplementor, Xamarin.Firebase.Firestore;mono.com.google.firebase.firestore.EventListenerImplementor
+Firebase.Firestore.IEventListenerImplementor;mono.com.google.firebase.firestore.EventListenerImplementor
+mono.com.google.firebase.firestore.EventListenerImplementor;mono.com.google.firebase.firestore.EventListenerImplementor
 Xamarin.Forms.Platform.Android.AndroidActivity, Xamarin.Forms.Platform.Android;crc643f46942d9dd1fff9.AndroidActivity
 Xamarin.Forms.Platform.Android.AndroidActivity;crc643f46942d9dd1fff9.AndroidActivity
 xamarin.forms.platform.android.AndroidActivity;crc643f46942d9dd1fff9.AndroidActivity
