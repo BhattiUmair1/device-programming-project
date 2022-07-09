@@ -6,7 +6,7 @@ namespace FirestoreRe.Droid.Services
     public static class FirestoreService
     {
         public static string AppName { get; } = "SampleAppName";
-        private static Firebase.FirebaseApp app;
+        public static Firebase.FirebaseApp app;
         
         public static FirebaseFirestore Instance
         {

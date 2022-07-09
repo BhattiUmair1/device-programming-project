@@ -4,7 +4,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Firebase;
 using Firebase.Auth;
+using FirestoreRe.Droid.Services;
 using Project.Droid.Firebase;
 using Project.Interfaces;
 using Project.Models;
@@ -28,7 +30,7 @@ namespace Project.Droid.Firebase
         {
             try
             {
-                var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
+                var user = await FirebaseAuth.GetInstance(FirestoreService.app).SignInWithEmailAndPasswordAsync(email, password);
                 var token = await user.User.GetIdTokenAsync(false);
 
                 _FirebaseLoginRespons.DisplayName = user.User.DisplayName;

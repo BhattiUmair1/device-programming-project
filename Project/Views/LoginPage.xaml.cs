@@ -40,18 +40,33 @@ namespace Project.Views
         }
 
 
-        private async Task<UserInfo> GetFLightAsync()
+        private async Task<List<Flights>> GetFLightAsync()
         {
             var flightsObject = DependencyService.Get<IFlightsRepository>();
             return await flightsObject.GetFlightAsync();
         }
+
+        private async Task AddFLightAsync()
+        {
+            var flightsObject = DependencyService.Get<IFlightsRepository>();
+            await flightsObject.AddFlightAsync();
+            return;
+        }
+        private async Task DeleteFlightAsync()
+        {
+            var flightsObject = DependencyService.Get<IFlightsRepository>();
+            await flightsObject.DeleteFlightAsync();
+            return;
+        }
+
         private async void TapGestureRecognizer_TappedAsync(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(entEmail.Text) && !string.IsNullOrWhiteSpace(entPassword.Text))
             {
-                //FirebaseLoginRespons respons = await LoginWithEmailAndPasswordAsync(entEmail.Text, entPassword.Text);
+                FirebaseLoginRespons respons = await LoginWithEmailAndPasswordAsync(entEmail.Text, entPassword.Text);
 
-                UserInfo userInfo = await GetFLightAsync();
+                //await AddFLightAsync();
+                //await DeleteFlightAsync();
                 //if (respons.IsError != true)
                 //{
                 //    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
@@ -65,5 +80,6 @@ namespace Project.Views
             }
 
         }
+
     }
 }
