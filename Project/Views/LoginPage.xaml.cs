@@ -40,7 +40,7 @@ namespace Project.Views
         }
 
 
-        private async Task<List<Flights>> GetFLightAsync()
+        private async Task<DepartureData[]> GetFLightAsync()
         {
             var flightsObject = DependencyService.Get<IFlightsRepository>();
             return await flightsObject.GetFlightAsync();
@@ -49,7 +49,8 @@ namespace Project.Views
         private async Task AddFLightAsync()
         {
             var flightsObject = DependencyService.Get<IFlightsRepository>();
-            await flightsObject.AddFlightAsync();
+            DepartureData EmptyObject = new DepartureData();
+            await flightsObject.AddFlightAsync(EmptyObject);
             return;
         }
         private async Task DeleteFlightAsync()
@@ -67,19 +68,15 @@ namespace Project.Views
 
                 //await AddFLightAsync();
                 //await DeleteFlightAsync();
-                //if (respons.IsError != true)
-                //{
-                //    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
-                //}
-                //else
-                //{
-                //    Console.WriteLine(respons.ErrorMessage);
-                //}
-
-
+                if (respons.IsError != true)
+                {
+                    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
+                }
+                else
+                {
+                    Console.WriteLine(respons.ErrorMessage);
+                }
             }
-
         }
-
     }
 }

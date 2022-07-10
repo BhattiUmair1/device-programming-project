@@ -8,8 +8,8 @@ namespace Project.Interfaces
 {
     public interface IFlightsRepository
     {
-        public Task<List<Flights>> GetFlightAsync();
-        public Task AddFlightAsync();
+        public Task<DepartureData[]> GetFlightAsync();
+        public Task AddFlightAsync(DepartureData FlightObject);
         public Task DeleteFlightAsync();
     }
 }

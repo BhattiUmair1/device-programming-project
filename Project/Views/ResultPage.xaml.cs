@@ -54,7 +54,6 @@ namespace Project.Views
             var item = listView.SelectedItem as DepartureData;
             Navigation.PushAsync(new FlightDetailPage(item.DBookingToken));
         }
-
         private void TapGestureRecognizer_Like(object sender, EventArgs e)
         {
             Debug.WriteLine("tap works");

@@ -58,7 +58,14 @@
                                                 </Image.GestureRecognizers>
                                             </Image>
                                         </Frame>
-                                        
+                                        <!--<Frame Padding="0" BackgroundColor="Transparent" Grid.Column="0" Grid.ColumnSpan="3"  Grid.Row="0" HasShadow="False" Margin="0,20,10,0">
+                                            <Image x:Name="imglike" Source="{Binding ImageLike}" HorizontalOptions="End">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Like"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </Frame>-->
+
                                         <!--Depature section-->
                                         <Frame Padding="0" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="1" HasShadow="False" Margin="0,17,0,0">
                                             <Grid ColumnSpacing="0" RowSpacing="1">

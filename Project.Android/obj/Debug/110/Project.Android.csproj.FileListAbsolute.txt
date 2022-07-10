@@ -2233,12 +2233,9 @@ C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\lp\92\jl\f
 C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\lp\95\jl\files.cache
 C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\lp\103\jl\files.cache
 C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Google.Guava.FailureAccess.dll
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\jl\718d85d1-c5ec-424d-88ed-1918e7a99b3b.jar
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\2f05a822-9c1f-4b53-9741-9f9b2196c15d.txt
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\5fd61361-cd04-4534-a83b-a4d0d07430ce.cfg
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\f50023f3-05fc-4ba4-a99c-73f9d278a6b1.txt
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\f705589f-ba18-4074-bb5f-0455eab43caf.txt
 C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\android\bin\classes2.dex
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\android\assets\Xamarin.Auth.pdb
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\android\src\crc6439a4f0329e049808\OnDocumentCompleteListener_1.java
-C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\android\src\crc64a59cdf2b1f855388\MainActivity_1.java
+C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\jl\c168762c-accd-4962-bb09-0a68e8bb58a4.jar
+C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\269593e6-4a2d-47e3-ad83-749d1009ff14.txt
+C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\81eccdf6-183a-4bf6-80ca-e1236de6fa0f.txt
+C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\a195dcd7-981b-4d75-bb52-4ab3c618c109.cfg
+C:\Users\umair\Desktop\Opdracht\Project\Project.Android\obj\Debug\110\androidx\proguard\f6a2956f-f591-48a8-ae33-9ede40330667.txt

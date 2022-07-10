@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Project.Models
@@ -18,13 +17,18 @@ namespace Project.Models
     {
         [JsonProperty(PropertyName = "dst")]
         public string FlightFrom { get; set; }
+
         [JsonProperty(PropertyName = "src")]
         public string FlightTo { get; set; }
+
         [JsonProperty(PropertyName = "operating_airline")]
         public OperatingAirline Airline { get; set; }
+        
         [JsonProperty(PropertyName = "local_arrival")]
         public DateTime LocalArrival { get; set; }
+        
         [JsonProperty(PropertyName = "local_departure")]
+        
         public DateTime LocalDeparture { get; set; }
         public ImageSource ImageLike { get; set; }
         public ImageSource DImageFlightDepature { get; set; }
@@ -41,8 +45,5 @@ namespace Project.Models
         [JsonProperty(PropertyName = "name")]
         public string NameAirline { get; set; }
     }
-
-
-
 
 }

@@ -21,6 +21,7 @@ namespace Project.Views
         {
             InitializeComponent();
             FlightType = 1;
+            EmailAdress = "email";
             LoadIcons();
         }
 
@@ -29,7 +30,8 @@ namespace Project.Views
             InitializeComponent();
             FlightType = 1;
             LoadIcons();
-            EmailAdress = email;
+            //EmailAdress = email;
+            EmailAdress = "email";
         }
         private void LoadIcons()
         {
@@ -50,6 +52,7 @@ namespace Project.Views
                     await Navigation.PushAsync(new ResultPage(CityTo, CityFromDate, CityFrom, EmailAdress));
                 }
             };
+            //await Navigation.PushAsync(new ResultPage("BRU", "10/07/2022", "CAI", "test"));
         }
         private void TapGestureRecognizer_TwoWay(object sender, EventArgs e)
         {
@@ -76,6 +79,7 @@ namespace Project.Views
             FlightType = 1;
         }
 
+        // if tapped => profile view
         private async void TapGestureRecognizer_Profile(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProfilePage(EmailAdress));

@@ -1,8 +1,6 @@
 ﻿using Project.Models;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 
@@ -12,7 +10,6 @@ namespace Project.Repository
     {
 
         public static object JsonConvert { get; private set; }
-
         private static HttpClient GetHttpClient()
         {
             HttpClient client = new HttpClient();
@@ -30,7 +27,8 @@ namespace Project.Repository
                     string json = await client.GetStringAsync(url);
                     if (json != null)
                     {
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<DepartureFlight>(json);
+                        var test = Newtonsoft.Json.JsonConvert.DeserializeObject<DepartureFlight>(json);
+                        return test;
                     }
                     return null;
                 }
@@ -40,7 +38,6 @@ namespace Project.Repository
                 }
             }
         }
-        // 
         public static async Task<FlightDetails> GetSelectedFlightInfoAsync(string BookingToken)
         {
             using (HttpClient client = GetHttpClient())
