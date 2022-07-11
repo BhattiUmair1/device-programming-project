@@ -8,11 +8,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Project.Models
 {
+
     public class DepartureFlight
     {
         [JsonProperty(PropertyName = "data")]
@@ -21,10 +23,12 @@ namespace Project.Models
     }
     public class DepartureData
     {
+        public DepartureData CurrentObject { get; private set; }
         public DepartureData()
         {
             ImageTapCommand = new Command(ImageTapped);
-            ImageTapTash = new Command(ImageTappedTrash);
+            ImageTapTash = new Command<object>(async (obj) => await ImageTappedTrashAsync(obj));
+
         }
 
         [JsonProperty(PropertyName = "id")]
@@ -66,7 +70,6 @@ namespace Project.Models
             DImageFlightDepature = ImageSource.FromResource("Project.Assets.Flight.png");
             Trashcan = ImageSource.FromResource("Project.Assets.Trashcan.png");
         }
-        
 
         // "interne logical"
         public ICommand ImageTapCommand { get; private set; }
@@ -80,38 +83,40 @@ namespace Project.Models
             flightsObject.AddFlightAsync(SelectedObject);
             //RepositoryCosmosDB.SendFavoriteFlight(SelectedObject);
         }
-        void ImageTappedTrash(object obj)
+
+        async Task ImageTappedTrashAsync(object obj)
         {
             Debug.WriteLine("Deleted");
-            var SelectedObject = obj as DepartureData;
-            RepositoryCosmosDB.DeleteFlight(SelectedObject);
+            CurrentObject = obj as DepartureData;
+            var flightsObject = DependencyService.Get<IFlightsRepository>();
+            await flightsObject.DeleteFlightAsync(CurrentObject.Id);
+            //RepositoryCosmosDB.DeleteFlight(CurrentObject);
         }
+        public class DepartureRoute
+        {
+            [JsonProperty(PropertyName = "id")]
+            public string DId { get; set; }
 
-    }
-    public class DepartureRoute
-    {
-        [JsonProperty(PropertyName = "id")]
-        public string DId { get; set; }
+            [JsonProperty(PropertyName = "cityFrom")]
+            public string DCityFrom { get; set; }
 
-        [JsonProperty(PropertyName = "cityFrom")]
-        public string DCityFrom { get; set; }
+            [JsonProperty(PropertyName = "cityCodeFrom")]
+            public string DCityCodeFrom { get; set; }
 
-        [JsonProperty(PropertyName = "cityCodeFrom")]
-        public string DCityCodeFrom { get; set; }
+            [JsonProperty(PropertyName = "cityTo")]
+            public string DCityTo { get; set; }
 
-        [JsonProperty(PropertyName = "cityTo")]
-        public string DCityTo { get; set; }
+            [JsonProperty(PropertyName = "cityCodeTo")]
+            public string DCityCodeTo { get; set; }
 
-        [JsonProperty(PropertyName = "cityCodeTo")]
-        public string DCityCodeTo { get; set; }
+            [JsonProperty(PropertyName = "airline")]
+            public string DAirline { get; set; }
 
-        [JsonProperty(PropertyName = "airline")]
-        public string DAirline { get; set; }
+            [JsonProperty(PropertyName = "local_arrival")]
+            public DateTime DLocalArrival { get; set; }
 
-        [JsonProperty(PropertyName = "local_arrival")]
-        public DateTime DLocalArrival { get; set; }
-
-        [JsonProperty(PropertyName = "local_departure")]
-        public DateTime DLocalDeparture { get; set; }
+            [JsonProperty(PropertyName = "local_departure")]
+            public DateTime DLocalDeparture { get; set; }
+        }
     }
 }

@@ -39,24 +39,10 @@ namespace Project.Views
 
         }
 
-
-        private async Task<DepartureData[]> GetFLightAsync()
+        private async Task DeleteFlightAsync(string id)
         {
             var flightsObject = DependencyService.Get<IFlightsRepository>();
-            return await flightsObject.GetFlightAsync();
-        }
-
-        private async Task AddFLightAsync()
-        {
-            var flightsObject = DependencyService.Get<IFlightsRepository>();
-            DepartureData EmptyObject = new DepartureData();
-            await flightsObject.AddFlightAsync(EmptyObject);
-            return;
-        }
-        private async Task DeleteFlightAsync()
-        {
-            var flightsObject = DependencyService.Get<IFlightsRepository>();
-            await flightsObject.DeleteFlightAsync();
+            await flightsObject.DeleteFlightAsync(id);
             return;
         }
 

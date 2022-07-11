@@ -31,7 +31,7 @@ namespace Project.Views
             FlightType = 1;
             LoadIcons();
             //EmailAdress = email;
-            EmailAdress = "email";
+            EmailAdress = email;
         }
         private void LoadIcons()
         {

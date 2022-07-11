@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,14 +32,17 @@ namespace Project.Views
         {
             //listView.ItemsSource = await Repository.RepositoryCosmosDB.GetFavoriteFlights(Email);
             var flightsObject = DependencyService.Get<IFlightsRepository>();
-            DepartureData[] favoriteFlights = await flightsObject.GetFlightAsync();
-            foreach (var flight in favoriteFlights)
+            var favoriteFlights = await flightsObject.GetFlightAsync();
+            if (favoriteFlights != null)
             {
-                flight.ImageLike = ImageSource.FromResource("Project.Assets.Like.png");
-                flight.DImageFlightDepature = ImageSource.FromResource("Project.Assets.Flight.png");
-                flight.Trashcan = ImageSource.FromResource("Project.Assets.Trashcan.png");
+                foreach (var flight in favoriteFlights)
+                {
+                    flight.ImageLike = ImageSource.FromResource("Project.Assets.Like.png");
+                    flight.DImageFlightDepature = ImageSource.FromResource("Project.Assets.Flight.png");
+                    flight.Trashcan = ImageSource.FromResource("Project.Assets.Trashcan.png");
+                }
+                listView.ItemsSource = favoriteFlights;
             }
-            listView.ItemsSource = favoriteFlights;
         }
 
         private void Loadicons()
@@ -58,5 +61,15 @@ namespace Project.Views
         {
             await Navigation.PopAsync();
         }
+
+        private async Task test(object obj)
+        {
+            DepartureData selectedObject = obj as DepartureData;
+            var flightsObject = DependencyService.Get<IFlightsRepository>();
+            await flightsObject.DeleteFlightAsync(selectedObject.Id);
+            return;
+        }
+
+
     }
 }

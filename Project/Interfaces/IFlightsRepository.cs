@@ -10,6 +10,6 @@ namespace Project.Interfaces
     {
         public Task<DepartureData[]> GetFlightAsync();
         public Task AddFlightAsync(DepartureData FlightObject);
-        public Task DeleteFlightAsync();
+        public Task DeleteFlightAsync(string id);
     }
 }

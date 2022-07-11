@@ -16,6 +16,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.OData.Core.dll",
 		"Microsoft.OData.Edm.dll",
 		"Microsoft.Spatial.dll",
+		"MvvmHelpers.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
 		"Project.dll",

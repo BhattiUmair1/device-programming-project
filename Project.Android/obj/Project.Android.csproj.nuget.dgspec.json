@@ -136,6 +136,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Refractored.MvvmHelpers": {
+              "target": "Package",
+              "version": "[1.6.2, )"
+            },
             "Xamarin.Auth": {
               "target": "Package",
               "version": "[1.7.0, )"
