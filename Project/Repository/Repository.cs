@@ -54,6 +54,7 @@ namespace Project.Repository
                 }
                 catch (Exception ex)
                 {
+                    var error = ex;
                     throw ex;
                 }
             }

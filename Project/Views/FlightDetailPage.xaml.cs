@@ -46,6 +46,8 @@ namespace Project.Views
 
         private async void TapGestureRecognizer_BackToSearch(object sender, EventArgs e)
         {
+            backframe.BackgroundColor = Color.FromHex("#e5e5e5");
+            backframe.Opacity = 0.9;
             await Navigation.PopAsync();
         }
     }

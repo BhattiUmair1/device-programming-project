@@ -17,21 +17,11 @@ namespace Project.Views
     {
         public int FlightType { get; set; }
         public string EmailAdress { get; set; }
+        public bool BtnEnabled { get; set; }
         public SearchPage()
         {
             InitializeComponent();
-            FlightType = 1;
-            EmailAdress = "email";
             LoadIcons();
-        }
-
-        public SearchPage(string email, string password)
-        {
-            InitializeComponent();
-            FlightType = 1;
-            LoadIcons();
-            //EmailAdress = email;
-            EmailAdress = email;
         }
         private void LoadIcons()
         {
@@ -42,47 +32,67 @@ namespace Project.Views
         {
             if (!string.IsNullOrWhiteSpace(entFrom.Text) && !string.IsNullOrWhiteSpace(entTo.Text) && !string.IsNullOrWhiteSpace(Convert.ToString(dateFrom.Date)))
             {
-                if (FlightType == 1)
-                {
-                    Debug.WriteLine("Searching...");
-                    string CityFrom = entFrom.Text.Substring(0, 3).ToUpper();
-                    Debug.WriteLine(CityFrom);
-                    string CityTo = entTo.Text.Substring(0, 3).ToUpper();
-                    string CityFromDate = dateFrom.Date.ToString("dd/MM/yyyy");
-                    await Navigation.PushAsync(new ResultPage(CityTo, CityFromDate, CityFrom, EmailAdress));
-                }
+                searchbtnframe.BackgroundColor = Color.FromHex("#adadad");
+                string CityFrom = entFrom.Text.Substring(0, 3).ToUpper();
+                string CityTo = entTo.Text.Substring(0, 3).ToUpper();
+                string CityFromDate = dateFrom.Date.ToString("dd/MM/yyyy");
+                await Navigation.PushAsync(new ResultPage(CityTo, CityFromDate, CityFrom, EmailAdress));
+                searchbtnframe.BackgroundColor = Color.FromHex("#3A3A3A");
             };
-            //await Navigation.PushAsync(new ResultPage("BRU", "10/07/2022", "CAI", "test"));
         }
-        private void TapGestureRecognizer_TwoWay(object sender, EventArgs e)
-        {
-            lblTwoWay.BackgroundColor = Color.FromHex("#737373");
-            lblTwoWay.TextColor = Color.White;
-            frameTwoWay.BackgroundColor = Color.FromHex("#737373");
-
-            lblOneWay.BackgroundColor = Color.White;
-            lblOneWay.TextColor = Color.FromHex("#A1A1A1");
-            frameOneWay.BackgroundColor = Color.Transparent;
-
-            FlightType = 2;
-        }
-        private void TapGestureRecognizer_OneWay(object sender, EventArgs e)
-        {
-            lblOneWay.BackgroundColor = Color.FromHex("#737373");
-            lblOneWay.TextColor = Color.White;
-            frameOneWay.BackgroundColor = Color.FromHex("#737373");
-
-            lblTwoWay.BackgroundColor = Color.White;
-            lblTwoWay.TextColor = Color.FromHex("#A1A1A1");
-            frameTwoWay.BackgroundColor = Color.Transparent;
-
-            FlightType = 1;
-        }
-
-        // if tapped => profile view
         private async void TapGestureRecognizer_Profile(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProfilePage(EmailAdress));
         }
+
+        private void entFrom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(entFrom.Text) && !string.IsNullOrEmpty(entTo.Text))
+            {
+                searchbtnframe.Opacity = 1;
+            } else
+            {
+                searchbtnframe.Opacity = 0.5;
+            }
+        }
+
+        private void entTo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(entFrom.Text) && !string.IsNullOrEmpty(entTo.Text))
+            {
+                searchbtnframe.Opacity = 1;
+            }
+            else
+            {
+                searchbtnframe.Opacity = 0.5;
+            }
+        }
+
+        //private void TapGestureRecognizer_TwoWay(object sender, EventArgs e)
+        //{
+        //    lblTwoWay.BackgroundColor = Color.FromHex("#737373");
+        //    lblTwoWay.TextColor = Color.White;
+        //    frameTwoWay.BackgroundColor = Color.FromHex("#737373");
+
+        //    lblOneWay.BackgroundColor = Color.White;
+        //    lblOneWay.TextColor = Color.FromHex("#A1A1A1");
+        //    frameOneWay.BackgroundColor = Color.Transparent;
+
+        //    FlightType = 2;
+        //}
+        //private void TapGestureRecognizer_OneWay(object sender, EventArgs e)
+        //{
+        //    lblOneWay.BackgroundColor = Color.FromHex("#737373");
+        //    lblOneWay.TextColor = Color.White;
+        //    frameOneWay.BackgroundColor = Color.FromHex("#737373");
+
+        //    lblTwoWay.BackgroundColor = Color.White;
+        //    lblTwoWay.TextColor = Color.FromHex("#A1A1A1");
+        //    frameTwoWay.BackgroundColor = Color.Transparent;
+
+        //    FlightType = 1;
+        //}
+
+        // if tapped => profile view
     }
 }

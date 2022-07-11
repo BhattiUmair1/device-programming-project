@@ -14,7 +14,7 @@ namespace Project
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new SearchPage());
         }
 
         protected override void OnStart()

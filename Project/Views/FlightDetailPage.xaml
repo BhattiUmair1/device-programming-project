@@ -22,7 +22,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" Grid.Row="0"  HasShadow="False" Margin="39,16,0,0">
+            <Frame x:Name="backframe" Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" Grid.Row="0"  HasShadow="False" Margin="39,16,0,0">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_BackToSearch" />
                 </Frame.GestureRecognizers>

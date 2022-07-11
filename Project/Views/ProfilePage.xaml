@@ -21,16 +21,6 @@
                     <Image x:Name="imgbackground"/>
                 </StackLayout>
             </Frame>
-            <Frame Grid.Column="0" Grid.Row="0" Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" HasShadow="False" Margin="39,16,0,0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Image x:Name="imgbackarrow" VerticalOptions="Center" HorizontalOptions="Center">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </Frame>
             <Frame Grid.Column="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Transparent" HasShadow="False" Grid.Row="0" Grid.RowSpan="2">
                 <Frame Padding="0" CornerRadius="34" WidthRequest="350" BackgroundColor="White" HeightRequest="356" HasShadow="False" Margin="39,71,39,0">
                     <Grid RowSpacing="0" HorizontalOptions="Center" VerticalOptions="Center">
@@ -43,6 +33,17 @@
 
                     </Grid>
                 </Frame>
+            </Frame>
+            <Frame x:Name="backframe" Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" Grid.Row="0"  HasShadow="False" Margin="39,16,0,0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_BackToSearch" />
+                </Frame.GestureRecognizers>
+                <Image x:Name="imgbackarrow" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_BackToSearch"/>
+
+                    </Image.GestureRecognizers>
+                </Image>
             </Frame>
             <Frame Grid.Column="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Transparent" HasShadow="False" Grid.Row="2">
                 <Frame Padding="0" CornerRadius="34" WidthRequest="350" BackgroundColor="White" HeightRequest="356" HasShadow="False" Margin="39,20,39,0">

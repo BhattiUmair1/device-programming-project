@@ -24,8 +24,7 @@ namespace FirestoreRe.Droid.Services
                 app = Firebase.FirebaseApp.InitializeApp(context, options, AppName);
             }
             catch (Exception)
-            {
-
+            { 
                 throw;
             }
 

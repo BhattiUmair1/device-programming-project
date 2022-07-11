@@ -57,19 +57,12 @@ namespace Project.Views
             Navigation.PushAsync(new FlightDetailPage(item.DBookingToken));
         }
 
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_BackToSearch(object sender, EventArgs e)
         {
+            backframe.BackgroundColor = Color.FromHex("#e5e5e5");
+            backframe.Opacity = 0.9;
+            Console.WriteLine("Going back..");
             await Navigation.PopAsync();
         }
-
-        private async Task test(object obj)
-        {
-            DepartureData selectedObject = obj as DepartureData;
-            var flightsObject = DependencyService.Get<IFlightsRepository>();
-            await flightsObject.DeleteFlightAsync(selectedObject.Id);
-            return;
-        }
-
-
     }
 }

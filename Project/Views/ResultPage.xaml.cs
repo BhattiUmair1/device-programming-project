@@ -1,4 +1,5 @@
-﻿using Project.Models;
+﻿
+using Project.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,7 +31,9 @@ namespace Project.Views
 
         private async void ShowResults(string CityTo, string CityFromDate, string CityFrom)
         {
+            //UserDialogs.Instance.ShowLoading("Loading please wait...");
             var Flights = await Repository.Repository.GetDepatureFlightsAsync(CityTo, CityFrom, CityFromDate);
+
             foreach (var item in Flights.DData)
             {
                 item.Email = EmailAdress;
@@ -44,19 +47,18 @@ namespace Project.Views
             imgbackground.Source = ImageSource.FromResource("Project.Assets.Background.png");
             imgbackarrow.Source = ImageSource.FromResource("Project.Assets.Back_arrow.png");
         }
-        private void TapGestureRecognizer_BackToSearch(object sender, EventArgs e)
+        private async void TapGestureRecognizer_BackToSearch(object sender, EventArgs e)
         {
+            backframe.BackgroundColor = Color.FromHex("#e5e5e5");
+            backframe.Opacity = 0.9;
             Debug.WriteLine("Going back..");
-            Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
-        private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listView_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
         {
             var item = listView.SelectedItem as DepartureData;
-            Navigation.PushAsync(new FlightDetailPage(item.DBookingToken));
-        }
-        private void TapGestureRecognizer_Like(object sender, EventArgs e)
-        {
-            Debug.WriteLine("tap works");
+            await Navigation.PushAsync(new FlightDetailPage(item.DBookingToken));
+            //listView.SelectedItem = null;
         }
     }
 }

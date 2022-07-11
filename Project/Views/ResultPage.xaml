@@ -22,7 +22,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" Grid.Row="0"  HasShadow="False" Margin="39,16,0,0">
+            <Frame x:Name="backframe" Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" Grid.Row="0"  HasShadow="False" Margin="39,16,0,0">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_BackToSearch" />
                 </Frame.GestureRecognizers>
@@ -32,7 +32,8 @@
                     </Image.GestureRecognizers>
                 </Image>
             </Frame>
-            <ListView x:Name="listView" IsVisible="True" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" HasUnevenRows="True" ItemSelected="listView_ItemSelected">
+
+            <ListView x:Name="listView" IsVisible="True" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" HasUnevenRows="True" ItemSelected="listView_ItemSelectedAsync">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

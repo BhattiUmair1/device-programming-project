@@ -56,7 +56,7 @@ namespace Project.Views
                 //await DeleteFlightAsync();
                 if (respons.IsError != true)
                 {
-                    await Navigation.PushAsync(new SearchPage(entEmail.Text, entPassword.Text));
+                    await Navigation.PushAsync(new SearchPage());
                 }
                 else
                 {

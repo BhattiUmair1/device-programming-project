@@ -44,7 +44,7 @@ namespace Project.Droid.Firebase.Repository
             // TODO get the current id van de user
             
             FirebaseFirestore db = FirestoreService.Instance;
-            //QuerySnapshot query = (QuerySnapshot)await db.Collection("Flights").WhereEqualTo(FieldPath.Of("userId"), _User.Uid).Get();
+            // TODO: vergeet de the string user id aan te passen naar "currentUser"
             QuerySnapshot query = (QuerySnapshot)await db.Collection("Flights").WhereEqualTo(FieldPath.Of("userId"), "QM5zwFfdnbRgglJ0yKA6r0gDdqo1").Get();
 
             int routeIndex;
