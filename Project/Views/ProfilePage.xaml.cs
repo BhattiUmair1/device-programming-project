@@ -18,17 +18,10 @@ namespace Project.Views
         {
             InitializeComponent();
             Loadicons();
-            ShowFavoriteFlights("");
+            ShowFavoriteFlightsAsync();
         }
 
-        public ProfilePage(string Email)
-        {
-            InitializeComponent();
-            Loadicons();
-            ShowFavoriteFlights(Email);
-        }
-
-        private async void ShowFavoriteFlights(string Email)
+        private async void ShowFavoriteFlightsAsync()
         {
             //listView.ItemsSource = await Repository.RepositoryCosmosDB.GetFavoriteFlights(Email);
             var flightsObject = DependencyService.Get<IFlightsRepository>();
@@ -42,6 +35,10 @@ namespace Project.Views
                     flight.Trashcan = ImageSource.FromResource("Project.Assets.Trashcan.png");
                 }
                 listView.ItemsSource = favoriteFlights;
+            }
+            else
+            {
+                listView.ItemsSource = null;
             }
         }
 
@@ -63,6 +60,16 @@ namespace Project.Views
             backframe.Opacity = 0.9;
             Console.WriteLine("Going back..");
             await Navigation.PopAsync();
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Image trashIcon = sender as Image;
+            trashIcon.Opacity = 0.7;
+            await Task.Delay(100);
+            trashIcon.Opacity = 1;
+
+            ShowFavoriteFlightsAsync();
         }
     }
 }

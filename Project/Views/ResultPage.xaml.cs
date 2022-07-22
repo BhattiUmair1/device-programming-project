@@ -56,9 +56,19 @@ namespace Project.Views
         }
         private async void listView_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
         {
+            
             var item = listView.SelectedItem as DepartureData;
             await Navigation.PushAsync(new FlightDetailPage(item.DBookingToken));
             //listView.SelectedItem = null;
+        }
+
+        private async void TapGestureRecognizer_TappedAsync(object sender, EventArgs e)
+        {
+            Image loveIcon = sender as Image;
+            loveIcon.Opacity = 0.5;
+            loveIcon.Source = ImageSource.FromResource("Project.Assets.Like_active.png");
+            await Task.Delay(100);
+            loveIcon.Opacity = 1;
         }
     }
 }

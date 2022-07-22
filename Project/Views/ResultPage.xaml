@@ -15,13 +15,11 @@
                 <ColumnDefinition Width="97"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
             <Frame Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#F2F2F2" HasShadow="False" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="2">
                 <StackLayout>
                     <Image x:Name="imgbackground"/>
                 </StackLayout>
             </Frame>
-
             <Frame x:Name="backframe" Padding="0" CornerRadius="18" BackgroundColor="White" WidthRequest="58" HeightRequest="35" Grid.Row="0"  HasShadow="False" Margin="39,16,0,0">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_BackToSearch" />
@@ -32,7 +30,6 @@
                     </Image.GestureRecognizers>
                 </Image>
             </Frame>
-
             <ListView x:Name="listView" IsVisible="True" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" HasUnevenRows="True" ItemSelected="listView_ItemSelectedAsync">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -52,10 +49,11 @@
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
                                         <!--Like Icons-->
-                                        <Frame Padding="0" BackgroundColor="Transparent" Grid.Column="0" Grid.ColumnSpan="3"  Grid.Row="0" HasShadow="False" Margin="0,20,10,0">
-                                            <Image x:Name="imglike" Source="{Binding ImageLike}" HorizontalOptions="End">
+                                        <Frame  Padding="0" BackgroundColor="Transparent" Grid.Column="0" Grid.ColumnSpan="3"  Grid.Row="0" HasShadow="False" Margin="0,20,5,0">
+
+                                            <Image Source="{Binding ImageLike}" HorizontalOptions="End">
                                                 <Image.GestureRecognizers>
-                                                    <TapGestureRecognizer Command="{Binding ImageTapCommand}" CommandParameter="{Binding .}"/>
+                                                    <TapGestureRecognizer Command="{Binding ImageTapCommand}" CommandParameter="{Binding .}" Tapped="TapGestureRecognizer_TappedAsync"/>
                                                 </Image.GestureRecognizers>
                                             </Image>
                                         </Frame>
@@ -141,8 +139,9 @@
                                                 </CarouselView>
                                             </Grid>
                                         </Frame>
-                                        
-                                        <!--Return section--><!--
+
+                                        <!--Return section-->
+                                        <!--
                                         <Frame Padding="0" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="3" HasShadow="False" Margin="0,20,0,0">
                                             <Grid ColumnSpacing="0" RowSpacing="1">
                                                 <Grid.ColumnDefinitions>
@@ -194,7 +193,8 @@
                                                     <RowDefinition Height="13"/>
                                                     <RowDefinition Height="27"/>
                                                 </Grid.RowDefinitions>
-                                                --><!-- HIER EEN LISTVIEW -->
+                                                -->
+                                        <!-- HIER EEN LISTVIEW -->
                                         <!--
                                                 <Label Text="AIRLINES" TextColor="#969696" FontSize="12" Grid.Row="0"/>
                                                 <CarouselView x:Name="carouselView2" ItemsSource="{Binding RRoute}" Grid.Row="1" Margin="0" Loop="False" IsVisible="true">
@@ -229,7 +229,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

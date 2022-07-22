@@ -91,6 +91,7 @@ namespace Project.Models
             var flightsObject = DependencyService.Get<IFlightsRepository>();
             await flightsObject.DeleteFlightAsync(CurrentObject.Id);
             //RepositoryCosmosDB.DeleteFlight(CurrentObject);
+
         }
         public class DepartureRoute
         {

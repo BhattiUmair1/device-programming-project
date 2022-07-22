@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Shapes;
 
 namespace Project.Views
 {
@@ -33,18 +34,33 @@ namespace Project.Views
             if (!string.IsNullOrWhiteSpace(entFrom.Text) && !string.IsNullOrWhiteSpace(entTo.Text) && !string.IsNullOrWhiteSpace(Convert.ToString(dateFrom.Date)))
             {
                 searchbtnframe.BackgroundColor = Color.FromHex("#adadad");
+                await Task.Delay(100);
+                searchbtnframe.BackgroundColor = Color.FromHex("#3A3A3A");
+
                 string CityFrom = entFrom.Text.Substring(0, 3).ToUpper();
                 string CityTo = entTo.Text.Substring(0, 3).ToUpper();
+
+
                 string CityFromDate = dateFrom.Date.ToString("dd/MM/yyyy");
+                var currentDate = DateTime.Now.ToString("dd/MM/yyyy");
+                var date1 = DateTime.Parse(CityFromDate);
+                var date2 = DateTime.Parse(currentDate);
+                var result = DateTime.Compare(date1, date2);
+                if (result < 0)
+                    return;
+
                 await Navigation.PushAsync(new ResultPage(CityTo, CityFromDate, CityFrom, EmailAdress));
-                searchbtnframe.BackgroundColor = Color.FromHex("#3A3A3A");
+
             };
         }
         private async void TapGestureRecognizer_Profile(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProfilePage(EmailAdress));
+            Ellipse profileIcon = (Ellipse)sender;
+            profileIcon.Opacity = 0.7;
+            await Task.Delay(100);
+            profileIcon.Opacity = 1;
+            await Navigation.PushAsync(new ProfilePage());
         }
-
         private void entFrom_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!string.IsNullOrEmpty(entFrom.Text) && !string.IsNullOrEmpty(entTo.Text))
@@ -55,7 +71,6 @@ namespace Project.Views
                 searchbtnframe.Opacity = 0.5;
             }
         }
-
         private void entTo_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!string.IsNullOrEmpty(entFrom.Text) && !string.IsNullOrEmpty(entTo.Text))
@@ -67,7 +82,6 @@ namespace Project.Views
                 searchbtnframe.Opacity = 0.5;
             }
         }
-
         //private void TapGestureRecognizer_TwoWay(object sender, EventArgs e)
         //{
         //    lblTwoWay.BackgroundColor = Color.FromHex("#737373");

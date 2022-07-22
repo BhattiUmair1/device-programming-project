@@ -23,14 +23,13 @@
             </Frame>
             <Frame Grid.Column="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Transparent" HasShadow="False" Grid.Row="0" Grid.RowSpan="2">
                 <Frame Padding="0" CornerRadius="34" WidthRequest="350" BackgroundColor="White" HeightRequest="356" HasShadow="False" Margin="39,71,39,0">
-                    <Grid RowSpacing="0" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Grid RowSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Frame Padding="0" WidthRequest="50" HorizontalOptions="Center" BackgroundColor="#DDDDDD" CornerRadius="500"></Frame>
-                        <Label Grid.Row="1" HorizontalOptions="Center" TextColor="#585858" Text="Umair Bhatti" FontSize="14" FontFamily="Roboto-B"></Label>
-
+                        <Frame Padding="0" WidthRequest="50" HorizontalOptions="Center" BackgroundColor="#DDDDDD" CornerRadius="500"/>
+                        <Label x:Name="lblusername" Grid.Row="1" HorizontalOptions="Center" TextColor="#585858" Text="Umair Bhatti" FontSize="14" FontFamily="Roboto-B" />
                     </Grid>
                 </Frame>
             </Frame>
@@ -50,15 +49,6 @@
                     <Label Text="Liked Flights" FontSize="14" FontFamily="Roboto-M" TextColor="#707070" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                 </Frame>
             </Frame>
-            <!--<ListView>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
             <!-- HIER EEN LISTVIEW -->
             <ListView Grid.Column="0" Grid.ColumnSpan="2" x:Name="listView" IsVisible="True" Grid.Row="3" BackgroundColor="Transparent" HasUnevenRows="True" ItemSelected="listView_ItemSelected">
                 <ListView.ItemTemplate>
@@ -82,7 +72,7 @@
                                         <Frame Padding="0" BackgroundColor="Transparent" Grid.Column="0" Grid.ColumnSpan="3"  Grid.Row="0" HasShadow="False" Margin="0,20,10,0">
                                             <Image x:Name="imglike" Source="{Binding Trashcan}" HorizontalOptions="End">
                                                 <Image.GestureRecognizers>
-                                                    <TapGestureRecognizer Command="{Binding ImageTapTash}" CommandParameter="{Binding .}" />
+                                                    <TapGestureRecognizer Command="{Binding ImageTapTash}" CommandParameter="{Binding .}" Tapped="TapGestureRecognizer_Tapped"/>
                                                 </Image.GestureRecognizers>
                                             </Image>
                                         </Frame>

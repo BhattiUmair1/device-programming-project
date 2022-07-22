@@ -12,7 +12,7 @@
             </Frame>
             <Frame Padding="0" BackgroundColor="Transparent">
                 <StackLayout Spacing="0">
-                    <Ellipse Fill="White" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center" Margin="0,30,0,30">
+                    <Ellipse Fill="White" WidthRequest="70" HeightRequest="70" HorizontalOptions="Center" Margin="0,30,0,30">
                         <Ellipse.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Profile"/>
                         </Ellipse.GestureRecognizers>
