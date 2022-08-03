@@ -31,15 +31,21 @@ namespace Project.Views
 
         private async void ShowResults(string CityTo, string CityFromDate, string CityFrom)
         {
-            //UserDialogs.Instance.ShowLoading("Loading please wait...");
+            FlightsDataLoader.IsVisible = true;
             var Flights = await Repository.Repository.GetDepatureFlightsAsync(CityTo, CityFrom, CityFromDate);
-
-            foreach (var item in Flights.DData)
+            if (Flights != null)
+            {
+                FlightsDataLoader.IsVisible = false;
+                foreach (var item in Flights.DData)
             {
                 item.Email = EmailAdress;
             }
-            
-            listView.ItemsSource = Flights.DData;
+                listView.ItemsSource = Flights.DData;
+            } else
+            {
+                FlightsDataLoader.IsVisible = false;
+                FrameNoFlights.IsVisible = true;
+            }
         }
 
         private void LoadIcons()
@@ -61,7 +67,6 @@ namespace Project.Views
             await Navigation.PushAsync(new FlightDetailPage(item.DBookingToken));
             //listView.SelectedItem = null;
         }
-
         private async void TapGestureRecognizer_TappedAsync(object sender, EventArgs e)
         {
             Image loveIcon = sender as Image;

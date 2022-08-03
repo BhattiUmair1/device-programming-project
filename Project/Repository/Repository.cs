@@ -27,14 +27,14 @@ namespace Project.Repository
                     string json = await client.GetStringAsync(url);
                     if (json != null)
                     {
-                        var test = Newtonsoft.Json.JsonConvert.DeserializeObject<DepartureFlight>(json);
-                        return test;
+                        var result = Newtonsoft.Json.JsonConvert.DeserializeObject<DepartureFlight>(json);
+                        return result;
                     }
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw ex;
+                    return null;
                 }
             }
         }
@@ -54,8 +54,7 @@ namespace Project.Repository
                 }
                 catch (Exception ex)
                 {
-                    var error = ex;
-                    throw ex;
+                    return null;
                 }
             }
         }

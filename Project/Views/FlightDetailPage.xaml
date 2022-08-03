@@ -7,9 +7,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="51"/>
-                <RowDefinition Height="399"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="400"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="97"/>
@@ -32,8 +30,8 @@
                     </Image.GestureRecognizers>
                 </Image>
             </Frame>
-            <Frame Padding="0,20,0,0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" CornerRadius="34" HeightRequest="260" BackgroundColor="White" HasShadow="False" Margin="39,20,39,0">
-                <ListView x:Name="lvwFlightDetails" IsVisible="True"  BackgroundColor="Transparent" HasUnevenRows="True">
+            <Frame Padding="0,20,0,20" Grid.Row="1" Grid.ColumnSpan="2" CornerRadius="34" BackgroundColor="White" HasShadow="False" Margin="39,20,39,-20">
+                <ListView x:Name="lvwFlightDetails"  BackgroundColor="Transparent" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -45,8 +43,6 @@
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-
                                     </Grid.RowDefinitions>
 
                                     <!--Depature section-->

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Project.Models
 {
-    public class FirebaseLoginRespons
+    public class FirebaseLoginAndSignupRespons
     {
         public string? DisplayName { get; set; }
         public string? Uid { get; set; }

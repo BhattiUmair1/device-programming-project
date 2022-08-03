@@ -8,8 +8,8 @@ namespace Project.Interfaces
 {
     public interface IFirebaseAuthentication
     {
-        Task<FirebaseLoginRespons> LoginWithEmailAndPassword(string email, string password);
+        Task<FirebaseLoginAndSignupRespons> LoginWithEmailAndPassword(string email, string password);
+        Task<FirebaseLoginAndSignupRespons> RegisterWithEmailAndPassword(string username, string email, string password);
         bool SignOut();
-        bool IsSignIn();
     }
 }

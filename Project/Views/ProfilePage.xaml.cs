@@ -1,4 +1,5 @@
-﻿using Project.Interfaces;
+﻿using Firebase.Storage;
+using Project.Interfaces;
 using Project.Models;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,17 @@ namespace Project.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
     {
+        public FirebaseUserInfo _UserInfo { get; set; }
         public ProfilePage()
         {
+            var instanceOfUserInfo = DependencyService.Get<IFirebaseUserService>();
+            _UserInfo = instanceOfUserInfo.GetUser();
             InitializeComponent();
             Loadicons();
             ShowFavoriteFlightsAsync();
+            lblUsername.Text = _UserInfo.DisplayName;
         }
+
 
         private async void ShowFavoriteFlightsAsync()
         {
@@ -41,11 +47,17 @@ namespace Project.Views
                 listView.ItemsSource = null;
             }
         }
-
         private void Loadicons()
         {
             imgbackground.Source = ImageSource.FromResource("Project.Assets.Background.png");
             imgbackarrow.Source = ImageSource.FromResource("Project.Assets.Back_arrow.png");
+            if (SearchPage.ProfilePicture == null)
+            {
+                imgProfile.Source = ImageSource.FromResource("Project.Assets.DefaultPicture.png");
+            } else
+            {
+                imgProfile.Source = SearchPage.ProfilePicture;
+            }
         }
 
         private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -61,7 +73,24 @@ namespace Project.Views
             Console.WriteLine("Going back..");
             await Navigation.PopAsync();
         }
+        private async void TapGestureRecognizer_Profile(object sender, EventArgs e)
+        {
+            imgProfile.Opacity = 0.7;
+            await Task.Delay(200);
+            imgProfile.Opacity = 1;
+            var photo = await Xamarin.Essentials.MediaPicker.PickPhotoAsync();
 
+            if (photo == null)
+                return;
+
+            var task = new FirebaseStorage("flightsappxamarin.appspot.com", new FirebaseStorageOptions
+            {
+                ThrowOnCancel = true,
+
+            }).Child(_UserInfo.Uid).Child("profilePicture.jpeg").PutAsync(await photo.OpenReadAsync());
+            imgProfile.Source = await task;
+            SearchPage.ProfilePicture = await task;
+        }
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Image trashIcon = sender as Image;

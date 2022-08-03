@@ -17,6 +17,7 @@
     <None Remove="Assets\Arrival_icon.png" />
     <None Remove="Assets\Background.png" />
     <None Remove="Assets\Back_arrow.png" />
+    <None Remove="Assets\DefaultPicture.png" />
     <None Remove="Assets\Departure_icon.png" />
     <None Remove="Assets\Flight.png" />
     <None Remove="Assets\Flying_plane.png" />
@@ -35,6 +36,7 @@
     <EmbeddedResource Include="Assets\Arrival_icon.png" />
     <EmbeddedResource Include="Assets\Background.png" />
     <EmbeddedResource Include="Assets\Back_arrow.png" />
+    <EmbeddedResource Include="Assets\DefaultPicture.png" />
     <EmbeddedResource Include="Assets\Departure_icon.png" />
     <EmbeddedResource Include="Assets\Flight.png" />
     <EmbeddedResource Include="Assets\Flying_plane.png" />
@@ -49,8 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.23.0" />
-    <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
@@ -79,6 +80,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SignupPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

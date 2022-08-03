@@ -7,9 +7,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="51"/>
-                <RowDefinition Height="399"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="97"/>
@@ -30,12 +28,17 @@
                     </Image.GestureRecognizers>
                 </Image>
             </Frame>
+            
+            <Frame x:Name="FrameNoFlights" IsVisible="false" Padding="0" CornerRadius="18" BackgroundColor="White" HeightRequest="100" Grid.Row="1" Grid.ColumnSpan="2" HasShadow="False" Margin="39,16,39,0">
+                <Label Text="Sorry no flights were found" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="16" FontFamily="Roboto-M"/>
+            </Frame>
+
             <ListView x:Name="listView" IsVisible="True" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" HasUnevenRows="True" ItemSelected="listView_ItemSelectedAsync">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
-                                <Frame Padding="0" CornerRadius="34" HeightRequest="260" BackgroundColor="White" HasShadow="False" Margin="39,20,39,0">
+                                <Frame Padding="0" CornerRadius="20" HeightRequest="260" BackgroundColor="White" HasShadow="False" Margin="39,20,39,0">
                                     <Grid ColumnSpacing="0" RowSpacing="0" Margin="26,0,26,0">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="41"/>
@@ -229,6 +232,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <ActivityIndicator x:Name="FlightsDataLoader" IsVisible="False" Color="black" WidthRequest="40" IsRunning="True" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,460,0,0"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

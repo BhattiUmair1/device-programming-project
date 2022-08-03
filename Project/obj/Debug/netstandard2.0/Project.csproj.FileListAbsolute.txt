@@ -40,8 +40,6 @@ C:\Users\umair\Desktop\Opdracht\Project\Project\Project\Project\obj\Debug\netsta
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project\Project\obj\Debug\netstandard2.0\refint\Project.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project\Project\obj\Debug\netstandard2.0\Project.pdb
 C:\Users\umair\Desktop\Opdracht\Project\Project\Project\Project\obj\Debug\netstandard2.0\ref\Project.dll
-C:\Users\umair\Desktop\Opdracht\Project\Project\bin\Debug\netstandard2.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
-C:\Users\umair\Desktop\Opdracht\Project\Project\bin\Debug\netstandard2.0\Cosmos.CRTCompat.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\bin\Debug\netstandard2.0\Project.deps.json
 C:\Users\umair\Desktop\Opdracht\Project\Project\bin\Debug\netstandard2.0\Project.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\bin\Debug\netstandard2.0\Project.pdb
@@ -62,3 +60,4 @@ C:\Users\umair\Desktop\Opdracht\Project\Project\obj\Debug\netstandard2.0\Project
 C:\Users\umair\Desktop\Opdracht\Project\Project\obj\Debug\netstandard2.0\refint\Project.dll
 C:\Users\umair\Desktop\Opdracht\Project\Project\obj\Debug\netstandard2.0\Project.pdb
 C:\Users\umair\Desktop\Opdracht\Project\Project\obj\Debug\netstandard2.0\ref\Project.dll
+C:\Users\umair\Desktop\Opdracht\Project\Project\obj\Debug\netstandard2.0\Views\SignupPage.xaml.g.cs
