@@ -15,11 +15,11 @@ namespace Project.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
     {
-        public FirebaseUserInfo _UserInfo { get; set; }
+        public FirebaseLoginAndSignupRespons _UserInfo { get; set; }
         public ProfilePage()
         {
-            var instanceOfUserInfo = DependencyService.Get<IFirebaseUserService>();
-            _UserInfo = instanceOfUserInfo.GetUser();
+            var instanceOfUserInfo = DependencyService.Get<IFirebaseAuthentication>();
+            _UserInfo = instanceOfUserInfo.GetCurrentUser();
             InitializeComponent();
             Loadicons();
             ShowFavoriteFlightsAsync();

@@ -228,13 +228,13 @@ namespace Project.Views
         };
         public bool IsFromCitySelected { get; set; }
         public bool IsToCitySelected { get; set; }
-        public FirebaseUserInfo _UserInfo { get; set; }
+        public FirebaseLoginAndSignupRespons _UserInfo { get; set; }
 
 
         public SearchPage()
         {
-            var instanceOfUserInfo = DependencyService.Get<IFirebaseUserService>();
-            _UserInfo = instanceOfUserInfo.GetUser();
+            var instanceOfUserInfo = DependencyService.Get<IFirebaseAuthentication>();
+            _UserInfo = instanceOfUserInfo.GetCurrentUser();
             InitializeComponent();
             LoadIcons();
             UserProfile();
@@ -353,8 +353,8 @@ namespace Project.Views
             string CityTo = pickerTo.SelectedItem.ToString().Substring(0, 3).ToUpper();
             string CityFromDate = dateFrom.Date.ToString("dd/MM/yyyy");
             var currentDate = DateTime.Now.ToString("dd/MM/yyyy");
-            var date1 = DateTime.Parse(CityFromDate);
-            var date2 = DateTime.Parse(currentDate);
+            var date1 = DateTime.ParseExact(CityFromDate, "dd/MM/yyyy", null);
+            var date2 = DateTime.ParseExact(currentDate, "dd/MM/yyyy", null);
             var result = DateTime.Compare(date1, date2);
             if (result < 0)
             {

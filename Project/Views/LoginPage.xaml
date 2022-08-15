@@ -43,7 +43,7 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Text="Password" TextColor="#707070" FontSize="12" FontFamily="Roboto-R" VerticalOptions="Center" Margin="10,0,7,0" Grid.Column="0"/>
                                     <Line WidthRequest="1" BackgroundColor="#E9E9E9" Margin="0,10,5,10" Grid.Column="1"></Line>
-                                    <Entry x:Name="entPassword"  Grid.Column="2" Margin="0,0,10,0" TextColor="#7D7D7D" FontFamily="Roboto-B" FontSize="15" VerticalOptions="Center" ></Entry>
+                                    <Entry x:Name="entPassword" IsPassword="True" Grid.Column="2" Margin="0,0,10,0" TextColor="#7D7D7D" FontFamily="Roboto-B" FontSize="15" VerticalOptions="Center" ></Entry>
                                 </Grid>
                             </Frame>
 

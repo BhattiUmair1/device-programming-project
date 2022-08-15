@@ -10,6 +10,6 @@ namespace Project.Interfaces
     {
         Task<FirebaseLoginAndSignupRespons> LoginWithEmailAndPassword(string email, string password);
         Task<FirebaseLoginAndSignupRespons> RegisterWithEmailAndPassword(string username, string email, string password);
-        bool SignOut();
+        FirebaseLoginAndSignupRespons GetCurrentUser();
     }
 }

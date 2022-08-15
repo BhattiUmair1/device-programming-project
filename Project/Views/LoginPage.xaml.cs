@@ -19,7 +19,7 @@ namespace Project.Views
         {
             InitializeComponent();
             Loadicons();
-            LoginWithEmailAndPasswordAsync("", "");
+            //LoginWithEmailAndPasswordAsync("", "");
         }
 
         private void Loadicons()
@@ -31,8 +31,8 @@ namespace Project.Views
         {
             var firebase = DependencyService.Get<IFirebaseAuthentication>();
 
-            FirebaseLoginAndSignupRespons respons = await firebase.LoginWithEmailAndPassword("xamarin@testuser.com", "test123456");
-            //FirebaseLoginAndSignupRespons respons = await firebase.LoginWithEmailAndPassword(email, password);
+            //FirebaseLoginAndSignupRespons respons = await firebase.LoginWithEmailAndPassword("xjxkfbgkdkr@gmail.com", "test123456");
+            FirebaseLoginAndSignupRespons respons = await firebase.LoginWithEmailAndPassword(email, password);
             if (respons.IsError != true)
             {
                 await Navigation.PushAsync(new SearchPage());
