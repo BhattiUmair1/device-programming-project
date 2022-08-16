@@ -31,6 +31,8 @@ namespace Project.Models
         public DateTime LocalDeparture { get; set; }
 
         public string FlightTime { get; set; }
+        public string DepartureTripTime { get; set; }
+        public string ArrivalTripTime { get; set; }
 
         public ImageSource ImageLike { get; set; }
         public ImageSource DImageFlightDepature { get; set; }
@@ -40,6 +42,21 @@ namespace Project.Models
         {
             AddImages();
             CalDuration();
+            CalFlightTimes();
+        }
+        private void CalFlightTimes()
+        {
+            DepartureTripTime = CheckIfTwoCharacters(LocalDeparture.Hour.ToString()) + ":" + CheckIfTwoCharacters(LocalDeparture.Minute.ToString());
+            ArrivalTripTime = CheckIfTwoCharacters(LocalArrival.Hour.ToString()) + ":" + CheckIfTwoCharacters(LocalArrival.Minute.ToString());
+        }
+
+        private string CheckIfTwoCharacters(string digits)
+        {
+            if (digits.Length < 2)
+            {
+                digits = "0" + digits;
+            }
+            return digits;
         }
         private void AddImages()
         {

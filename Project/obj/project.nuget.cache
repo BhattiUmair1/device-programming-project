@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4ilI9l8TJR/wCCURCAjk304yGjhOmQ5hfdQ/e2lmNv4FN902+3vQqqGRW/nYQ5UktS+YyGvokii/c6RagVMu3Q==",
+  "dgSpecHash": "ug4+5hR6BRs6xH5XcVTU1eVlG6m0jzKLA2scTwFDNnZ86Kce+4fF0qIT+9opDKaFDXnDGoDgOYO8DO4Mpq2ktg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\umair\\Desktop\\etstgsgsg\\Project\\Project.csproj",
+  "projectFilePath": "C:\\Users\\umair\\Desktop\\testing xamarin\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umair\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
     "C:\\Users\\umair\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

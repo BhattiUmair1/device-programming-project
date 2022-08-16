@@ -78,7 +78,7 @@
                                                     <RowDefinition Height="auto"/>
                                                     <RowDefinition Height="auto"/>
                                                 </Grid.RowDefinitions>
-                                                <Label Font="16" FontFamily="Roboto-B" Text="16:45" TextColor="#3D3D3D" Grid.Column="0" Grid.Row="0"/>
+                                                <Label Font="16" FontFamily="Roboto-B" Text="{Binding DepartureTripTime}" TextColor="#3D3D3D" Grid.Column="0" Grid.Row="0"/>
                                                 <!--Text="{Binding Departure}"-->
 
                                                 <Frame Padding="0" BackgroundColor="Transparent" CornerRadius="11" BorderColor="#252525" WidthRequest="41" HeightRequest="22" HasShadow="False" Grid.Column="0" Grid.Row="1">
@@ -108,7 +108,7 @@
                                                     <RowDefinition Height="auto"/>
                                                     <RowDefinition Height="auto"/>
                                                 </Grid.RowDefinitions>
-                                                <Label Font="16" FontFamily="Roboto-B"  Text="19:20" TextColor="#3D3D3D" Grid.Column="0" Grid.Row="0"/>
+                                                <Label Font="16" FontFamily="Roboto-B"  Text="{Binding ArrivalTripTime}" TextColor="#3D3D3D" Grid.Column="0" Grid.Row="0"/>
                                                 <Frame Padding="0" BackgroundColor="Transparent" CornerRadius="11" BorderColor="#252525" WidthRequest="41" HeightRequest="22" HasShadow="False" Grid.Column="0" Grid.Row="1">
                                                     <Label  VerticalOptions="Center" HorizontalOptions="Center" Font="12" FontFamily="Roboto-B"  Text="{Binding DCityToCode}" TextColor="#707070"></Label>
                                                 </Frame>

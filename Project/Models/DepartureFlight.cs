@@ -56,6 +56,8 @@ namespace Project.Models
         public DateTime DDeparture { get; set; }
 
         public string TripTime { get; set; }
+        public string DepartureTripTime { get; set; }
+        public string ArrivalTripTime { get; set; }
 
         public ImageSource ImageLike { get; set; }
 
@@ -68,8 +70,23 @@ namespace Project.Models
         [OnDeserialized]
         public void CallMethods(StreamingContext context)
         {
+            CalFlightTimes();
             CalDuration();
             AddImages();
+        }
+        private void CalFlightTimes()
+        {
+            DepartureTripTime = CheckIfTwoCharacters(DDeparture.Hour.ToString()) + ":" + CheckIfTwoCharacters(DDeparture.Minute.ToString());
+            ArrivalTripTime = CheckIfTwoCharacters(DReturn.Hour.ToString()) + ":" + CheckIfTwoCharacters(DReturn.Minute.ToString());
+        }
+
+        private string CheckIfTwoCharacters(string digits)
+        {
+            if (digits.Length < 2)
+            {
+               digits = "0" + digits;
+            }
+            return digits;
         }
 
         private void CalDuration()
