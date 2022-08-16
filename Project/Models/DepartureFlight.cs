@@ -26,8 +26,8 @@ namespace Project.Models
         public DepartureData CurrentObject { get; private set; }
         public DepartureData()
         {
-            ImageTapCommand = new Command(ImageTapped);
-            ImageTapTash = new Command<object>(async (obj) => await ImageTappedTrashAsync(obj));
+            LikeImageTapCommand = new Command(LikeImageTapMethod);
+            TashImageTapCommand = new Command<object>(async (obj) => await TashImageTapMethodAsync(obj));
 
         }
 
@@ -55,6 +55,8 @@ namespace Project.Models
         [JsonProperty(PropertyName = "local_departure")]
         public DateTime DDeparture { get; set; }
 
+        public string TripTime { get; set; }
+
         public ImageSource ImageLike { get; set; }
 
         public ImageSource DImageFlightDepature { get; set; }
@@ -64,27 +66,38 @@ namespace Project.Models
         public string Email { get; set; }
 
         [OnDeserialized]
-        public void GetImages(StreamingContext context)
+        public void CallMethods(StreamingContext context)
+        {
+            CalDuration();
+            AddImages();
+        }
+
+        private void CalDuration()
+        {
+            TimeSpan timeSpan = DReturn.Subtract(DDeparture);
+            var timeSplitUp = timeSpan.ToString().Split(':');
+            TripTime = timeSplitUp[0] + "h " + timeSplitUp[1] + "m";
+        }
+
+        private void AddImages()
         {
             ImageLike = ImageSource.FromResource("Project.Assets.Like.png");
             DImageFlightDepature = ImageSource.FromResource("Project.Assets.Flight.png");
             Trashcan = ImageSource.FromResource("Project.Assets.Trashcan.png");
         }
-
         // "interne logical"
-        public ICommand ImageTapCommand { get; private set; }
-        public ICommand ImageTapTash { get; private set; }
+        public ICommand LikeImageTapCommand { get; private set; }
+        public ICommand TashImageTapCommand { get; private set; }
 
-        void ImageTapped(object obj)
+        void LikeImageTapMethod(object obj)
         {
             Debug.WriteLine("Add");
             var SelectedObject = obj as DepartureData;
             var flightsObject = DependencyService.Get<IFlightsRepository>();
             flightsObject.AddFlightAsync(SelectedObject);
-            //RepositoryCosmosDB.SendFavoriteFlight(SelectedObject);
         }
 
-        async Task ImageTappedTrashAsync(object obj)
+        async Task TashImageTapMethodAsync(object obj)
         {
             Debug.WriteLine("Deleted");
             CurrentObject = obj as DepartureData;

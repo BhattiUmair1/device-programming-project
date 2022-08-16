@@ -56,7 +56,7 @@
 
                                             <Image Source="{Binding ImageLike}" HorizontalOptions="End">
                                                 <Image.GestureRecognizers>
-                                                    <TapGestureRecognizer Command="{Binding ImageTapCommand}" CommandParameter="{Binding .}" Tapped="TapGestureRecognizer_TappedAsync"/>
+                                                    <TapGestureRecognizer Command="{Binding LikeImageTapCommand}" CommandParameter="{Binding .}" Tapped="TapGestureRecognizer_TappedAsync"/>
                                                 </Image.GestureRecognizers>
                                             </Image>
                                         </Frame>
@@ -96,7 +96,7 @@
                                                     <RowDefinition Height="23"/>
                                                 </Grid.RowDefinitions>
                                                 <Image x:Name="imgflight" Source="{Binding DImageFlightDepature}" VerticalOptions="Center" Grid.Row="0" HorizontalOptions="Center"/>
-                                                <Label TextColor="#9E9E9E" FontFamily="Roboto-B" FontSize="10" Text="03h 25m" Grid.Row="1" HorizontalOptions="Center"></Label>
+                                                <Label TextColor="#9E9E9E" FontFamily="Roboto-B" FontSize="10" Text="{Binding TripTime}" Grid.Row="1" HorizontalOptions="Center"></Label>
                                             </Grid>
                                         </Frame>
                                         <Frame Padding="0" BackgroundColor="Transparent" Grid.Column="2" Grid.Row="1" HasShadow="False" Margin="0,17,0,0">

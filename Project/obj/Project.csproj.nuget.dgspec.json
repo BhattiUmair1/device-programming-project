@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\umair\\Desktop\\New folder (2)\\Project\\Project.csproj": {}
+    "C:\\Users\\umair\\Desktop\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\umair\\Desktop\\New folder (2)\\Project\\Project.csproj": {
+    "C:\\Users\\umair\\Desktop\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umair\\Desktop\\New folder (2)\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\umair\\Desktop\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\umair\\Desktop\\New folder (2)\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\umair\\Desktop\\Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\umair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umair\\Desktop\\New folder (2)\\Project\\obj\\",
+        "outputPath": "C:\\Users\\umair\\Desktop\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\umair\\AppData\\Roaming\\NuGet\\NuGet.Config",

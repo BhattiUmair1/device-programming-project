@@ -28,16 +28,29 @@ namespace Project.Models
         public DateTime LocalArrival { get; set; }
         
         [JsonProperty(PropertyName = "local_departure")]
-        
         public DateTime LocalDeparture { get; set; }
+
+        public string FlightTime { get; set; }
+
         public ImageSource ImageLike { get; set; }
         public ImageSource DImageFlightDepature { get; set; }
 
         [OnDeserialized]
-        private void GetImages(StreamingContext context)
+        private void CallMethods(StreamingContext context)
+        {
+            AddImages();
+            CalDuration();
+        }
+        private void AddImages()
         {
             ImageLike = ImageSource.FromResource("Project.Assets.Like.png");
             DImageFlightDepature = ImageSource.FromResource("Project.Assets.Flight.png");
+        }
+        private void CalDuration()
+        {
+            TimeSpan timeSpan = LocalArrival.Subtract(LocalDeparture);
+            var timeSplitUp = timeSpan.ToString().Split(':');
+            FlightTime = timeSplitUp[0] + "h " + timeSplitUp[1] + "m";
         }
     }
     public class OperatingAirline
