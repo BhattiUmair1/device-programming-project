@@ -82,7 +82,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Firebase\FirebaseAuthentication.cs" />
+    <Compile Include="Services\FirebaseAuthenticationService.cs" />
     <Compile Include="Services\FirestoreService.cs" />
     <Compile Include="Services\FlightService.cs" />
     <Compile Include="MainActivity.cs" />

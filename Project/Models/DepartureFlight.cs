@@ -70,9 +70,9 @@ namespace Project.Models
         [OnDeserialized]
         public void CallMethods(StreamingContext context)
         {
-            CalFlightTimes();
             CalDuration();
             AddImages();
+            CalFlightTimes();
         }
         private void CalFlightTimes()
         {
@@ -84,7 +84,7 @@ namespace Project.Models
         {
             if (digits.Length < 2)
             {
-               digits = "0" + digits;
+                digits = "0" + digits;
             }
             return digits;
         }
